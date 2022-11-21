@@ -9,61 +9,9 @@ import {
 } from "react-native";
 
 export default function App() {
-  const [text, setText] = useState(0);
-  const [logD, setLogD] = useState([]);
-  const [display, setDisplay] = useState(false);
-  const handlePress = () => {
-    const newText = text + 1;
-    setText(newText);
-    const loged = logD;
-    loged.push(newText);
-    setLogD(loged);
-  };
-  const handleReset = () => {
-    setText(0);
-    const loged = [];
-    setLogD(loged);
-  };
-
-  const handleAdd = () => {
-    const newText = text + 2;
-    setText(newText);
-    const loged = logD;
-    console.log(loged);
-    loged.push(newText);
-    setLogD(loged);
-  };
-
-  const logdata = () => {
-    setDisplay(!display);
-  };
-
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.containerText}>Number Counter</Text>
-      <Text style={styles.counterText}>{text}</Text>
-      <ScrollView>
-        {display ? (
-          logD.map((d, i) => <Text key={i}>{i + " --> " + d}</Text>)
-        ) : (
-          <Text></Text>
-        )}
-      </ScrollView>
-
-      <View style={styles.btnView}>
-        <TouchableOpacity style={styles.btn} onPress={handlePress}>
-          <Text>Count</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.btn} onPress={handleReset}>
-          <Text>Reset</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.btn} onPress={handleAdd}>
-          <Text>Add 2</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.btn} onPress={logdata}>
-          <Text>Log Data</Text>
-        </TouchableOpacity>
-      </View>
     </SafeAreaView>
   );
 }

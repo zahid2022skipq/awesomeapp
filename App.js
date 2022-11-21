@@ -1,12 +1,5 @@
 import { useState } from "react";
-import {
-  StyleSheet,
-  Text,
-  SafeAreaView,
-  TouchableOpacity,
-  View,
-  ScrollView,
-} from "react-native";
+import { StyleSheet, Text, SafeAreaView } from "react-native";
 
 export default function App() {
   return (

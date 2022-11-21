@@ -5,6 +5,7 @@ import {
   SafeAreaView,
   TouchableOpacity,
   View,
+  ScrollView,
 } from "react-native";
 
 export default function App() {
@@ -20,8 +21,7 @@ export default function App() {
   };
   const handleReset = () => {
     setText(0);
-    const loged = logD;
-    loged.push(0);
+    const loged = [];
     setLogD(loged);
   };
 
@@ -42,11 +42,13 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <Text style={styles.containerText}>Number Counter</Text>
       <Text style={styles.counterText}>{text}</Text>
-      {display ? (
-        logD.map((d, i) => <Text key={i}>{i + " --> " + d}</Text>)
-      ) : (
-        <Text></Text>
-      )}
+      <ScrollView>
+        {display ? (
+          logD.map((d, i) => <Text key={i}>{i + " --> " + d}</Text>)
+        ) : (
+          <Text></Text>
+        )}
+      </ScrollView>
 
       <View style={styles.btnView}>
         <TouchableOpacity style={styles.btn} onPress={handlePress}>

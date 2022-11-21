@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { StyleSheet, Text, SafeAreaView } from "react-native";
+import { StyleSheet, Text, SafeAreaView, Image } from "react-native";
 
 export default function App() {
   const handlePress = () => {
@@ -8,8 +8,9 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.containerText} onPress={handlePress}>
-        Number Counter
+        Hello WOrld
       </Text>
+      <Image source={require("./assets/logo.png")} />
     </SafeAreaView>
   );
 }
@@ -17,11 +18,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "dodgerblue",
+    backgroundColor: "#fff",
     alignItems: "center",
-  },
-  containerText: {
-    marginTop: 44,
-    fontSize: 24,
+    justifyContent: "center",
   },
 });

@@ -15,7 +15,7 @@ export default function App() {
     const newText = text + 1;
     setText(newText);
     const loged = logD;
-    loged.push(0);
+    loged.push(newText);
     setLogD(loged);
   };
   const handleReset = () => {
@@ -30,7 +30,7 @@ export default function App() {
     setText(newText);
     const loged = logD;
     console.log(loged);
-    loged.push(0);
+    loged.push(newText);
     setLogD(loged);
   };
 
@@ -43,7 +43,7 @@ export default function App() {
       <Text style={styles.containerText}>Number Counter</Text>
       <Text style={styles.counterText}>{text}</Text>
       {display ? (
-        logD.map((d, i) => <Text>{i + " --> " + d}</Text>)
+        logD.map((d, i) => <Text key={i}>{i + " --> " + d}</Text>)
       ) : (
         <Text></Text>
       )}

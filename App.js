@@ -11,6 +11,10 @@ export default function App() {
         Hello WOrld
       </Text>
       <Image source={require("./assets/icon.png")} style={styles.img} />
+      <Image
+        source={{ uri: "https://picsum.photos/200/300" }}
+        style={styles.img}
+      />
     </SafeAreaView>
   );
 }
@@ -24,6 +28,6 @@ const styles = StyleSheet.create({
   },
   img: {
     height: 200,
-    width: 200,
+    width: 300,
   },
 });

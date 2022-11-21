@@ -12,7 +12,6 @@ export default function App() {
       </Text>
       <Image source={require("./assets/icon.png")} style={styles.img} />
       <Image
-        imageSource={require("./assets/icon.png")}
         source={{ uri: "https://picsum.photos/200/300" }}
         style={styles.img}
       />

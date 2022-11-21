@@ -10,7 +10,7 @@ export default function App() {
       <Text style={styles.containerText} onPress={handlePress}>
         Hello WOrld
       </Text>
-      <Image source={require("./assets/logo.png")} />
+      <Image source={require("./assets/icon.png")} style={styles.img} />
     </SafeAreaView>
   );
 }
@@ -21,5 +21,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  img: {
+    height: 200,
+    width: 200,
   },
 });

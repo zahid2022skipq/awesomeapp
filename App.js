@@ -2,9 +2,14 @@ import { useState } from "react";
 import { StyleSheet, Text, SafeAreaView } from "react-native";
 
 export default function App() {
+  const handlePress = () => {
+    console.log("Text Pressed");
+  };
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.containerText}>Number Counter</Text>
+      <Text style={styles.containerText} onPress={handlePress}>
+        Number Counter
+      </Text>
     </SafeAreaView>
   );
 }
@@ -16,21 +21,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   containerText: {
-    marginTop: 10,
+    marginTop: 44,
     fontSize: 24,
-  },
-  btnView: {
-    flexDirection: "row",
-  },
-  btn: {
-    marginTop: 20,
-    marginRight: 5,
-    backgroundColor: "white",
-    padding: 10,
-  },
-  counterText: {
-    padding: 20,
-    margin: 20,
-    fontSize: 20,
   },
 });
